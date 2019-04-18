@@ -1,0 +1,19 @@
+mixin promo-slider(data, b)
+  .promo-slider.swiper-container.js-promo-slider(class=b ? b + '__promo-slider' : '')
+    .promo-slider__wrapper.swiper-wrapper
+
+      each slide in data
+        .promo-slider__slide.swiper-slide
+          .promo-slider__content
+            p.promo-slider__category= slide.category
+            h3.promo-slider__heading= slide.title
+            img.promo-slider__img-mobile(src=slide.imgMobile alt='')
+            p.promo-slider__caption= slide.caption
+            a.btn.btn-outline-white.promo-slider__btn(href=slide.url title=slide.button)= slide.button
+          img.promo-slider__img(src=slide.img alt='')
+
+    .swiper-pagination
+    
+    .swiper-buttons
+      button.swiper-button-prev
+      button.swiper-button-next

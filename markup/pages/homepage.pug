@@ -1,0 +1,62 @@
+extends layout
+
+block settings
+  - page = 'homepage';
+  - header = false;
+  - title = 'Главная страница';
+
+block content
+
+  // promo slider
+  +promo-slider(db.promoSlider.first, 'page-content')
+  
+
+  // categories-section
+  .categories-section.page-content__categories-section
+    .grid.categories-section__grid.js-grid
+
+      each category in db.categories.first
+        .col.categories-section__col(class=category.type ? 'categories-section__col--' + category.type : '')
+          +category-card(category, 'categories-section')
+        
+
+  // promo slider
+  +promo-slider(db.promoSlider.second, 'page-content')
+
+
+  // categories-section
+  .categories-section.page-content__categories-section
+    .grid.categories-section__grid.js-grid
+      
+      each category in db.categories.second
+        .col.categories-section__col(class=category.type ? 'categories-section__col--' + category.type : '')
+          +category-card(category, 'categories-section')
+
+  
+  // promo slider
+  +promo-slider(db.promoSlider.third, 'page-content')
+
+
+  // categories-section
+  .categories-section.page-content__categories-section
+    .grid.categories-section__grid.js-grid
+      
+      each category in db.categories.third
+        .col.categories-section__col(class=category.type ? 'categories-section__col--' + category.type : '')
+          +category-card(category, 'categories-section')
+
+
+  // section articles
+  .section.page-content__section
+    .section__header
+      h3.section__title Новини та огляди
+      a.section__link(href='#' title='Всі новини') Всі новини
+
+    .section__content.js-articles-slider-xl
+      .grid.section__grid
+
+        each article in db.articles.latest
+          .col.section__column
+            +article-card(article, 'section')
+
+      .swiper-pagination

@@ -1,0 +1,27 @@
+ProjectTitle: Vinga
+
+PageList:
+- file: homepage.html
+  ready: 100
+- file: catalog.html
+  ready: 90
+- file: product.html
+  ready: 90
+- file: articles.html
+  ready: 90
+- file: article.html
+  ready: 90
+- file: about.html
+  ready: 90
+- file: compare.html
+  ready: 90
+- file: partners.html
+  ready: 90
+- file: search.html
+  ready: 90
+- file: search-products.html
+  ready: 90
+- file: search-articles.html
+  ready: 90
+- file: service.html
+  ready: 90

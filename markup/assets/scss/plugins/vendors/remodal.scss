@@ -1,0 +1,36 @@
+.remodal {
+    padding: rem(35px) rem(25px) rem(30px);
+    max-width: 508px;
+    text-align: left;
+
+    &--xl {
+        max-width: 1440px;
+        padding-bottom: rem(40px);
+    }
+
+    &--wide {
+        max-width: 1385px;
+    }
+
+    @include max($lg) {
+        padding: rem(45px) $gutter $gutter;
+    }
+}
+
+.remodal-overlay {
+    background-color: rgba($black, 0.7);
+}
+
+.remodal-close {
+    top: rem(5px);
+    right: rem(5px);
+    left: auto;
+
+    &::before {
+        @include bg-svg($close);
+        content: '';
+        position: static;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

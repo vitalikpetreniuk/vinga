@@ -1,0 +1,82 @@
+block settings
+  - var title = '';
+  - var page = '';
+  - var aside = false;
+  - var header = true;
+  - var breadcrumbs = [];
+  - var filterCategory = [];
+
+include ../components/promo-slider/promo-slider.pug
+include ../components/article-card/article-card.pug
+include ../components/product-card/product-card.pug
+include ../components/category-card/category-card.pug
+include ../components/partner-card/partner-card.pug
+include ../components/rating/rating.pug
+
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head.pug
+
+  body
+    |%=symbols=%
+    
+    .page(class=(page) ? 'page--' + page : '')
+      
+      include ../components/header/navbar.pug
+      
+      // page-main
+      main.page-main.page__page-main
+        .container.page-main__container
+
+          // main-header
+          if (header)
+            .main-header.page-main__main-header
+              if (breadcrumbs)
+                ul.breadcrumbs.main-header__breadcrumbs
+                  each item, index in breadcrumbs
+                    li.breadcrumbs__item
+                      a.breadcrumbs__link(href='#' title='')= item
+
+              if (title && !product && page !== 'article' || filterCategory)
+                .main-header__info
+                  h1.main-header__heading= title
+
+                  if (filterCategory)
+                    .category-filter.main-header__category-filter.js-category-filter
+                      ul.category-filter__list
+                        each item in filterCategory
+                          li.category-filter__item
+                            a.category-filter__link(href='#' title=item)= item
+                  
+                  if (navSlider)
+                    .section__nav
+                      .swiper-buttons.js-compare-nav
+                        button.swiper-button-prev
+                        button.swiper-button-next
+                  
+
+          // main-body
+          .main-body.page-main__main-body
+              if aside
+                // main-aside
+                aside.main-aside.main-body__main-aside
+                  block aside
+
+              // main-content
+              .main-content.main-body__main-content
+                block content
+
+      
+      // some sections might be outside main body container
+      block contentOutsideContainer
+        
+      include ../components/footer/footer.pug
+
+      // overlay
+      .page-overlay.page__page-overlay.js-overlay
+
+      block modals
+        
+      include ../components/shared/scripts.pug
+      

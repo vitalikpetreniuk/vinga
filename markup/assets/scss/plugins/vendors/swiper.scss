@@ -1,0 +1,96 @@
+.swiper-slide {
+    height: auto;
+}
+
+.swiper-pagination {
+    margin-top: $gutter;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 rem(2.5px);
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: rem(23px);
+}
+
+.swiper-pagination-bullet {
+    width: rem(20px);
+    height: rem(2px);
+    background-color: $dark;
+    opacity: 0.5;
+    border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    margin-top: rem(-15px);
+    width: rem(52px);
+    height: rem(52px);
+    text-align: center;
+    background: none;
+    border: 0;
+    outline: 0;
+    transition: opacity 250ms ease-in-out;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        opacity: 0.55;
+    }
+}
+
+.swiper-button-prev::before,
+.swiper-container-rtl .swiper-button-next::before {
+    @include bg-svg($chevron-left);
+}
+
+.swiper-button-next::before,
+.swiper-container-rtl .swiper-button-prev::before {
+    @include bg-svg($chevron-right);
+}
+
+.swiper-container-horizontal .swiper-buttons {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: rem(15px);
+    margin-bottom: rem(15px);
+    z-index: 10;
+
+    @include max($sm) {
+        position: static;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        margin-top: 0;
+        width: rem(40px);
+        height: rem(40px);
+
+        @include max($sm) {
+            position: absolute;
+            top: 50%;
+            margin-top: rem(-20px);
+        }
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+}

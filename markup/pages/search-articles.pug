@@ -1,0 +1,69 @@
+extends layout
+
+block settings
+  - aside = true;
+  - header = true;
+  - title = 'По запиту “Телевізор” знайдені наступні матеріали';
+  - breadcrumbs = ['Головна', 'Телевізори']
+
+block aside
+
+  form.product-filter.main-aside__product-filter.js-filter(action='/' method='post')
+    .product-filter__inner
+      each property in db.searchFilter
+        .product-filter__group
+          .product-filter__title(class=property.opened ? 'is-opened' : '')= property.title
+          .product-filter__content
+
+            if (property.values)
+              ul.product-filter__list(class=property.inline ? 'product-filter__list--inline' : '')
+
+                each value in property.values
+                  li.product-filter__item
+                    if value.tag
+                      label.tag.product-filter__tag
+                        input.tag__input(type='checkbox')
+                        span.tag__label
+                          span.tag__value= value.title
+                          span.tag__count= value.count
+                    else
+                      label.checkbox.product-filter__checkbox
+                        input.checkbox__input(type='checkbox')
+                        span.checkbox__toggle
+                        span.checkbox__label= value.title
+                          if value.count 
+                            span.checkbox__count (#{value.count})
+    
+    .product-filter__footer
+      button.product-filter__reset(type='reset') Очистити
+      button.btn.btn-primary.product-filter__btn Застосувати
+
+
+block content
+
+  // sorting
+  .product-sorting.main-content__product-sorting.is-hidden-desktop
+    button.product-sorting__filter.js-filter-toggle
+
+  // catalog
+  .grid.grid--articles.main-content__grid
+
+    each article in db.articles.all
+      .col.col--4.main-content__col
+        +article-card(article, 'main-content')
+  
+  // pagination
+  ul.pagination.main-content__pagination
+    li.pagination__item
+      a.pagination__link.is-active(href='#' title='') 1
+    li.pagination__item
+      a.pagination__link(href='#' title='') 2
+    li.pagination__item
+      a.pagination__link(href='#' title='') 3
+    li.pagination__item
+      a.pagination__link.pagination__next(href='#' title='')
+    li.pagination__item
+      a.pagination__link(href='#' title='') 32
+
+block modals
+  include ../components/modal/buy

@@ -1,0 +1,19 @@
+// modal reply review
+.remodal.modal(data-remodal-id='replyReview')
+  button.remodal-close(data-remodal-action='close')
+  .modal__title Прокоментувати
+  form.form.modal__form.js-form-reply-review
+    .field.form__field
+      label.label.field__label Коментар
+      textarea.textarea.field__textarea(type='text' name='text')
+
+    .field.form__field
+      label.label.field__label Ім’я
+      input.input.field__input(type='text' name='name')
+    
+    .field.form__field
+      label.label.field__label Ел. пошта
+      input.input.field__input(type='email' name='email')
+      small.field__small адресу не буде видно іншим користувачам
+    
+    button.btn.btn-md.btn-secondary.form__btn Відправити

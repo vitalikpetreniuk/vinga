@@ -1,0 +1,27 @@
+// page-footer
+footer.page-footer.page__page-footer
+  .container.page-footer__container
+
+    .page-footer__start
+      a.logo.page-footer__logo(href='homepage.html' title='')
+        img.logo__img(src='__static__img/minified-svg/logo-white.svg' alt='Vinga')
+      
+      p.page-footer__copyright &copy; 1998 – 2019 Vinga TM
+
+      p.page-footer__studio Designed by 
+        a.page-footer__studio-link(href='http://yavoko.com/' title='Yavoko' target='_blank') Yavoko
+    
+    .page-footer__menu
+      p.page-footer__title Про нас
+      ul.primary-nav.page-footer__primary-nav
+        each navItem in db.footerNav
+          li.primary-nav__item
+            a.primary-nav__link(href=navItem.url title=navItem.title)= navItem.title
+
+    .page-footer__content
+      p.page-footer__title Покликана часом
+      p Vinga - новітні технології відібрані згідно потреб ринку, сучасний дизайн, ціна, що не містить в собі зайвих витрат.  Це влучне поєднання !
+
+    .socials.page-footer__socials
+      button.socials__item.socials__item--fb(data-sharer='facebook' data-url='https://google.com')
+      button.socials__item.socials__item--yt(data-sharer='youtube' data-url='https://google.com')

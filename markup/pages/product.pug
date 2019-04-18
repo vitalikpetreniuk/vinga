@@ -1,0 +1,530 @@
+extends layout
+
+block settings
+  - aside = false;
+  - header = true;
+  - product = true;
+  - title = 'Пристрій безперебійного живлення Vinga LED 1200VA plastic case (VPE-1200P)';
+  - breadcrumbs = ['Головна', 'Телевізори']
+
+block content
+  
+  // product preview
+  .product-preview.main-content__product-preview
+    .product-preview__tablet
+      h1.product-preview__heading Пристрій безперебійного живлення Vinga LED 1200VA plastic case (VPE-1200P)
+      .product-card__meta.product-preview__meta
+          +rating(1, 'product-card')
+          a.product-card__comments(href='#' title='') 26
+
+    .media.product-preview__media
+      .media__thumbs
+        .media__slider.swiper-container.js-media-thumbs
+          .media__wrapper.swiper-wrapper
+
+            - for (var i = 0; i < 9; i++) {
+              .media__slide.swiper-slide
+                .media__item
+                  .media__inner
+                    img.media__img(src='__static__img/content/product/product.jpg' alt='')
+            - }
+        
+        span.media__more.js-thumbs-more(data-remodal-target='modal-media') еще <span class='js-thumbs-count'>5</span> фото
+
+      .media__large
+        .media__slider.swiper-container.js-media-large
+          .media__wrapper.swiper-wrapper
+            
+            - for (var i = 0; i < 9; i++) {
+              .media__slide.swiper-slide
+                .media__item
+                  .media__inner(data-remodal-target='modal-media')
+                    img.media__img(src='__static__img/content/product/product.jpg' alt='')
+            - }
+          
+          .swiper-pagination.media__pagination
+    
+    .modal.remodal.remodal--wide(data-remodal-id='modal-media')
+      button(class='remodal-close' data-remodal-action='close')
+
+      .media.modal__media
+        .media__thumbs
+          .swiper-button-prev.js-button-media-modal-prev
+          .swiper-button-next.js-button-media-modal-next
+          .media__slider.swiper-container.js-media-thumbs-modal
+            
+
+            .media__wrapper.swiper-wrapper
+
+              - for (var i = 0; i < 9; i++) {
+                .media__slide.swiper-slide
+                  .media__item
+                    .media__inner
+                      img.media__img(src='__static__img/content/product/product.jpg' alt='')
+              - }
+        .media__large
+          .media__slider.swiper-container.js-media-large-modal
+            .media__wrapper.swiper-wrapper
+              
+              - for (var i = 0; i < 9; i++) {
+                .media__slide.swiper-slide
+                  .media__item
+                    .media__inner
+                      img.media__img(src='__static__img/content/product/product.jpg' alt='')
+              - }
+            
+            .swiper-button-prev
+            .swiper-button-next
+
+        .swiper-pagination.modal__media-pagination
+
+    .product-preview__content
+      .product-preview__inner
+        a.btn.btn-icon.btn-icon--compare.product-preview__compare(href='#' title='Добавить к сравнению')
+        .shares.product-preview__shares
+          button.btn.btn-icon.btn-icon--socials.shares__btn.js-srahes-toggle
+          .shares__dropdown
+            button.sharer.sharer--facebook.shares__item(data-sharer='facebook' data-url='https://google.com')
+            button.sharer.sharer--telegram.shares__item(data-sharer='telegram' data-url='https://google.com')
+            button.sharer.sharer--messenger.shares__item(data-sharer='viber' data-url='https://google.com')
+        p.product-preview__articul Артикул: L43FHD22B
+        h1.product-preview__heading Пристрій безперебійного живлення Vinga LED 1200VA plastic case (VPE-1200P)
+        p.product-preview__caption Лінійно-інтерактивні джерело безперебійного живлення Vinga призначені для захисту персональних комп'ютерів, робочих станцій, а також серверів, оснащених імпульсними блоками живлення.
+        .product-card__meta.product-preview__meta
+          +rating(0, 'product-card')
+          a.product-card__comments(href='#' title='') 26
+        span.price.product-preview__price 27 332
+          span.price__currency грн.
+        a.btn.btn-primary.product-preview__btn(href='#' title='Де придбати' data-remodal-target='buyProduct') Де придбати
+
+
+  // product detail
+  .product-detail.main-content__product-detail
+    .product-detail__content
+      .tabs.product-detail__tabs.js-tabs
+        ul.tabs__nav
+          li.tabs__btn.js-tabs-btn.is-active Огляд
+          li.tabs__btn.js-tabs-btn Опис товару
+          li.tabs__btn.js-tabs-btn Характеристики
+          li.tabs__btn.js-tabs-btn Вiдгуки
+            span.tabs__count 1
+          li.tabs__btn.js-tabs-btn Вiдгуки
+            span.tabs__count 0
+        
+        .tabs__body
+
+          // tabs item
+          .tabs__item.is-active.js-tab
+            button.tabs__btn Огляд
+
+            .tabs__inner
+              .tabs__excrept.excrept.js-excrept
+                .content.excrept__content
+                  h2 Огляд і тестування корпуса Vinga CS401B: життя без відеокарти 
+                  p Хоча ми протестували понад двадцяти корпусів від Vinga, це зовсім не означає, що виробникові вже нічим здивувати наших постійних читачів. Правда, цього разу йдеться про один із найбільш компактних представників лінійки.
+                  img(src='__static__img/content/product/1.jpg' alt='')
+                  p Спеціально для любителів невеликих ПК розроблена п'ятірка корпусів: починаючи від Vinga CS401B і закінчуючи CS405B. До нас на тестування потрапило перше рішення з попередньо встановленим БЖ, яке при вартості $35 також є найдоступнішим з них. Що ж, давайте знайомитися.
+                  h2 Упаковка і комплект постачання
+                  .grid.content__grid
+                    .col.col--6.content__col
+                      img(src='__static__img/content/product/2.jpg' alt='')
+                    .col.col--6.content__col
+                      img(src='__static__img/content/product/3.jpg' alt='')
+                  p Монохромна коробка обладнана зручною ручкою для транспортування. Таблиця специфікації тут є, однак через наявні в ній неточностей краще звернутися до офіційного сайту.
+                  img(src='__static__img/content/product/4.jpg' alt='')
+                  p Комплектація набрана відповідно до конструкції пристрою, дозволяючи застосовувати його в різних конфігураціях. Усередині упаковки ми виявили:
+                  ul
+                    li набір гвинтів;
+                    li стяжки для дротів;
+                    li наклеюються ніжки для горизонтального розміщення;
+                    li пластикові підставки для вертикального розміщення;
+                    li мережевий шнур живлення.
+                  h2 Зовнішній вигляд
+                  img(src='__static__img/content/product/5.jpg' alt='')
+                  p Чорний пластик фронтальної панелі відмінно скрадає відбитки пальців, а срібляста кайма разом з декоративними виїмками вносить приємні нотки в дизайн. Замість логотипу виробника чомусь використовується не зовсім зрозуміла емблема в центрі, а місця для зовнішніх пристроїв тут не знайшлося. У нижній же частині розмістилися кнопки ввімкнення і перезавантаження, індикатор активності накопичувача, пара аудіороз'ємів і два USB 2.0. Так, усе вірно - в ім'я здешевлення тут використовуються дуже повільні інтерфейси другого покоління. Щось не схоже на кінець 2018-го...
+
+          // tabs item
+          .tabs__item.js-tab
+            button.tabs__btn Опис товару
+
+            .tabs__inner
+              .content.tabs__content
+                h2 Телевізор Vinga L43FHD22B
+                h5 Чітке зображення
+                p Бюджетна модель телевізора, універсально відповідного як для вітальні, так і для кухні або спальні. Діагональ телевізора - 40 дюймів, в наявності підтримка FullHD-роздільність в 1920x1080 пікселів. Зображення виходить яскравим і контрастним за рахунок підвищеної контрастності в 4000: 1. Матричний екран з матрицею типу LCD має стандартну частоту розгортки панелі в 60 Гц і підсвічування Direct LED. Яскравість екрану досягає показника 220 kd / m2. Кут огляду стандартний - 170/170, що дозволяє насолоджуватися переглядом улюблених фільмів і відеозаписів з будь-якої частини приміщення.
+                h5 Неймовірна передача кольорів
+                p Оптимальний час відгуку становить 8 мс, що дозволяє уникнути розмивання картинки навіть при швидкому перемиканні каналів або перегляді динамічних екнш-сцен. <br>Телевізор підтримує сучасну технологію Dynamic Noise Reduction, що захищає від перешкод і спотворення зображення. У телевізор вбудовані два об'ємних динаміки загальною потужністю 14 Вт, що передають якісний звук без шумів і перешкод на будь-якій гучності. <br>Телевізор підтримує стандартні інтерфейси підключення USB і HDMI - в наявності є USB-порт і три HDMI-порту.
+                h5 Динамічні екшин-сцени
+                p Максимальний показник відеосигналу, підтримуваного пристроєм - 1080i. Телевізор не підтримує технологію Blu-ray і Smart TV, проте здатний відтворювати більшість відеоформатів, таких як AVI, MOV, а також аудіо- та фотоформаті JPEG, MP3, PNG, BMP і інші. Повний перелік зазначено в керівництві користувача. <br>Телевізор дає змогу переглядати цифрове телебачення завдяки вбудованому тюнеру типу DVB-T2, або зчитувати дані з портативних носіїв. Додаткові підтримувані формати тюнерів - цифрові DVB-C і DVB-T2. У телевізор вбудовані роз'єми для підключення навушників, один оптичний аудіо-роз'єм, антенний роз'єм і порти типу Composite і Component. Пристрій підтримує три стандарти системи кольоровості - NTSC, PAL і SECAM. Два додаткових порту - CI і Scart.
+                h5 Органічний дизайн
+                p Енергоспоживання у телевізора трохи вище середнього - 65 Вт. Кріплення проводиться з використанням системи VESA - універсальна система кронштейнів, які можна монтувати на будь-яку стіну.
+
+          // tabs item
+          .tabs__item.js-tab
+            button.tabs__btn Характеристики
+
+            .tabs__inner
+              ul.characters.tabs__characters
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Тип телевизора
+                  span.characters__value
+                    span.characters__text LED - телевізор
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Діагональ экрану
+                  span.characters__value
+                    span.characters__text 40"
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Тип матриці
+                  span.characters__value
+                    span.characters__text LCD
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Роздільна здатність екрану
+                  span.characters__value
+                    span.characters__text 1920 x 1080
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Тип матриці
+                  span.characters__value
+                    span.characters__text 220kd/m2
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Роздільна здатність екрану
+                  span.characters__value
+                    span.characters__text Аудіовхід, Component In (Y/Pb/Pr), 3 х HDMI, Headphone Антенний, 1 х RJ-45, 2 х USB, CI, COAX Out, 3 х HDMI, Headphone, Антенний, 1 х RJ-45, 2 х USB, CI, COAX Out
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Кіл-ть роз'ємів додаткового живлення для відеокарт підключення материнскої плати
+                  span.characters__value
+                    span.characters__text 8mc
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Тип телевизора
+                  span.characters__value
+                    span.characters__text Dynamic Noise Reduction
+                li.characters__item
+                  span.characters__label
+                    span.characters__text Діагональ экрану
+                  span.characters__value
+                    span.characters__text NTSC PAL SECAM
+
+          // tabs item
+          .tabs__item.js-tab
+            button.tabs__btn Вiдгуки
+              span.tabs__count 1
+            
+            .tabs__inner
+              .reviews.tabs__reviews
+                .reviews__header
+                  h3.reviews__heading Відгуки про Пристрій безперебійного живлення Vinga LED 1200VA plastic case (VPE-1200P)
+                  button.btn.btn-md.btn-secondary.reviews__btn(data-remodal-target='addReview') Додати відгук
+                
+                .reviews__content
+
+                  // review-card
+                  .review-card.reviews__review-card
+                    .review-card__header
+                      .review-card__info
+                        p.review-card__name Света Василенко
+                        +rating(3, 'review-card')
+                      span.review-card__date 20.01.2018
+                    
+                    .review-card__body
+                      .review-card__first
+                        ul.review-card__list
+                          li.review-card__item.review-card__item--positive Красивый, легкий, толстый. Прекрасный экран
+                          li.review-card__item.review-card__item--negative Время покажет, на данный момент не выявлено. Укажите пожалуйста, какую именно яркость и контрастность имеет этот телевизор, в цифрах. 5
+                          li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует. <br>Пульт стоит отдельно отметить, очень удобный, отличная сенсорика
+                        .review-card__footer
+                          .vote.review-card__vote
+                            a.vote__btn.vote__btn--like(href='#' title='') 05
+                            a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                          button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+                      
+                  // review-card
+                  .review-card.reviews__review-card
+                    .review-card__header
+                      .review-card__info
+                        p.review-card__name Петр
+                        +rating(3, 'review-card')
+                      span.review-card__date 20.01.2018
+                    
+                    .review-card__body
+                      .review-card__first
+                        ul.review-card__list
+                          li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует. <br>Пульт стоит отдельно отметить, очень удобный, отличная сенсорика
+                        .review-card__footer
+                          .vote.review-card__vote
+                            a.vote__btn.vote__btn--like(href='#' title='') 05
+                            a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                          button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+                        
+                      .review-card__answer
+                        .review-card__meta
+                          p.review-card__author Иван Петров
+                          span.review-card__date 06 лютого 2019
+                        ul.review-card__list
+                          li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует. 
+                        .review-card__footer
+                          .vote.review-card__vote
+                            a.vote__btn.vote__btn--like(href='#' title='') 05
+                            a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                          button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+
+                  // review-card
+                  .review-card.reviews__review-card
+                    .review-card__header
+                      .review-card__info
+                        p.review-card__name Света Василенко
+                        +rating(3, 'review-card')
+                      span.review-card__date 20.01.2018
+                    
+                    .review-card__body
+                      .review-card__first
+                        ul.review-card__list
+                          li.review-card__item.review-card__item--negative Время покажет, на данный момент не выявлено. Укажите пожалуйста, какую именно яркость и контрастность имеет этот телевизор, в цифрах. 5
+                          li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует. <br>Пульт стоит отдельно отметить, очень удобный, отличная сенсорика
+                        .review-card__footer
+                          .vote.review-card__vote
+                            a.vote__btn.vote__btn--like(href='#' title='') 05
+                            a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                          button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+
+                .reviews__footer
+                  button.btn.btn-md.btn-secondary.reviews__btn(data-remodal-target='addReview') Додати відгук
+                  ul.pagination.reviews__pagination
+                    - for (var i = 1; i <= 3; i++) {
+                      li.pagination__item
+                        a.pagination__link(href='#' title=i class=(i === 2) ? 'is-active' : '')= i
+                    - }
+
+          // tabs item
+          .tabs__item.js-tab
+            .tabs__inner
+              .reviews.tabs__reviews
+                .reviews__header
+                  h3.reviews__heading Будь першим, хто залишить відгук
+                
+                form.form.reviews__form.js-form-add-review
+                  .field.field--inline.form__field
+                    +rating(0, 'field', true)
+                    label.label.field__label Оцініть товар
+                  
+                  .field.form__field
+                    label.label.field__label Переваги:
+                    textarea.textarea.field__textarea(type='text' name='good')
+                  
+                  .field.form__field
+                    label.label.field__label Недоліки:
+                    textarea.textarea.field__textarea(type='text' name='bad')
+                  
+                  .field.form__field
+                    label.label.field__label Коментар
+                    textarea.textarea.field__textarea(type='text' name='text')
+                  
+                  .field.form__field
+                    label.label.field__label Ім’я
+                    input.input.field__input(type='text' name='name')
+                  
+                  .field.form__field
+                    label.label.field__label Ел. пошта
+                    input.input.field__input(type='email' name='email')
+                    small.field__small адресу не буде видно іншим користувачам
+
+                  button.btn.btn-md.btn-secondary.form__btn Додати відгук
+
+    .product-detail__aside
+
+      .wiget.product-detail__wiget
+        .wiget__header
+          p.wiget__title Купують разом
+        .products-related.wiget__products-related
+          .products-related__slider.swiper-container.js-products-related
+            .products-related__wrapper.swiper-wrapper
+
+              // slide
+              .products-related__slide.swiper-slide
+                .product-card.products-related__product-card
+                  .product-card__front
+                    .product-card__header
+                      .product-card__photo
+                        .product-card__slide.swiper-slide
+                          img.product-card__img(src='__static__img/content/products/product-1.jpg' srcset='__static__img/content/products/product-1@2x.jpg 2x' alt='')
+                    .product-card__inner
+                      .product-card__body
+                        .product-card__about
+                          h3.product-card__title
+                            a.product-card__link(href='product.html' title='') Пристрій безперебійного живлення Vinga 600VA-PU, 2USB*5V /1A (VPP-600U)
+                          .product-card__info
+                            .product-card__meta
+                              +rating(3, 'product-card')
+                              a.product-card__comments(href='#' title='') 12
+                        .product-card__footer
+                          span.price.product-card__price 12 678
+                            span.price__currency грн.
+              
+              // slide
+              .products-related__slide.swiper-slide
+                .product-card.products-related__product-card
+                  .product-card__front
+                    .product-card__header
+                      .product-card__photo
+                        .product-card__slide.swiper-slide
+                          img.product-card__img(src='__static__img/content/products/product-1.jpg' srcset='__static__img/content/products/product-1@2x.jpg 2x' alt='')
+                    .product-card__inner
+                      .product-card__body
+                        .product-card__about
+                          h3.product-card__title
+                            a.product-card__link(href='product.html' title='') Пристрій безперебійного живлення Vinga 600VA-PU, 2USB*5V /1A (VPP-600U)
+                          .product-card__info
+                            .product-card__meta
+                              +rating(3, 'product-card')
+                              a.product-card__comments(href='#' title='') 12
+                        .product-card__footer
+                          span.price.product-card__price 12 678
+                            span.price__currency грн.
+              
+              // slide
+              .products-related__slide.swiper-slide
+                .product-card.products-related__product-card
+                  .product-card__front
+                    .product-card__header
+                      .product-card__photo
+                        .product-card__slide.swiper-slide
+                          img.product-card__img(src='__static__img/content/products/product-1.jpg' srcset='__static__img/content/products/product-1@2x.jpg 2x' alt='')
+                    .product-card__inner
+                      .product-card__body
+                        .product-card__about
+                          h3.product-card__title
+                            a.product-card__link(href='product.html' title='') Пристрій безперебійного живлення Vinga 600VA-PU, 2USB*5V /1A (VPP-600U)
+                          .product-card__info
+                            .product-card__meta
+                              +rating(3, 'product-card')
+                              a.product-card__comments(href='#' title='') 12
+                        .product-card__footer
+                          span.price.product-card__price 12 678
+                            span.price__currency грн.
+              
+              // slide
+              .products-related__slide.swiper-slide
+                .product-card.products-related__product-card
+                  .product-card__front
+                    .product-card__header
+                      .product-card__photo
+                        .product-card__slide.swiper-slide
+                          img.product-card__img(src='__static__img/content/products/product-1.jpg' srcset='__static__img/content/products/product-1@2x.jpg 2x' alt='')
+                    .product-card__inner
+                      .product-card__body
+                        .product-card__about
+                          h3.product-card__title
+                            a.product-card__link(href='product.html' title='') Пристрій безперебійного живлення Vinga 600VA-PU, 2USB*5V /1A (VPP-600U)
+                          .product-card__info
+                            .product-card__meta
+                              +rating(3, 'product-card')
+                              a.product-card__comments(href='#' title='') 12
+                        .product-card__footer
+                          span.price.product-card__price 12 678
+                            span.price__currency грн.
+              
+              // slide
+              .products-related__slide.swiper-slide
+                .product-card.products-related__product-card
+                  .product-card__front
+                    .product-card__header
+                      .product-card__photo
+                        .product-card__slide.swiper-slide
+                          img.product-card__img(src='__static__img/content/products/product-1.jpg' srcset='__static__img/content/products/product-1@2x.jpg 2x' alt='')
+                    .product-card__inner
+                      .product-card__body
+                        .product-card__about
+                          h3.product-card__title
+                            a.product-card__link(href='product.html' title='') Пристрій безперебійного живлення Vinga 600VA-PU, 2USB*5V /1A (VPP-600U)
+                          .product-card__info
+                            .product-card__meta
+                              +rating(3, 'product-card')
+                              a.product-card__comments(href='#' title='') 12
+                        .product-card__footer
+                          span.price.product-card__price 12 678
+                            span.price__currency грн.
+              
+              // slide
+              .products-related__slide.swiper-slide
+                .product-card.products-related__product-card
+                  .product-card__front
+                    .product-card__header
+                      .product-card__photo
+                        .product-card__slide.swiper-slide
+                          img.product-card__img(src='__static__img/content/products/product-1.jpg' srcset='__static__img/content/products/product-1@2x.jpg 2x' alt='')
+                    .product-card__inner
+                      .product-card__body
+                        .product-card__about
+                          h3.product-card__title
+                            a.product-card__link(href='product.html' title='') Пристрій безперебійного живлення Vinga 600VA-PU, 2USB*5V /1A (VPP-600U)
+                          .product-card__info
+                            .product-card__meta
+                              +rating(3, 'product-card')
+                              a.product-card__comments(href='#' title='') 12
+                        .product-card__footer
+                          span.price.product-card__price 12 678
+                            span.price__currency грн.
+
+        .wiget__footer
+          .swiper-buttons.wiget__swiper-buttons.js-products-related-nav
+            button.swiper-button-prev
+            button.swiper-button-next
+          a.wiget__more(href='#' title='Всі пропозиціі') Всі пропозиціі
+
+      //
+        .product-detail__wigets.sticky-top
+          .wiget.product-detail__wiget
+            .wiget__content
+              p.wiget__title Комплектація
+              ul.wiget__list
+                li.wiget__item Телевізор
+                li.wiget__item Кронштейн
+                li.wiget__item Пульт
+          
+          .wiget.product-detail__wiget
+            .wiget__content
+              span.wiget__warning
+              .wiget__slider.swiper-container.js-wiget-slider
+                .wiget__wrapper.swiper-wrapper
+                  .wiget__slide.swiper-slide
+                    p.wiget__caption Набір драйверів для Телевізора Vinga L43FHD22B  (707 МБ) Читать INSTALL.txt в архиве.
+                    a.wiget__download(href='#' title='Скачати') Скачати
+                  
+                  .wiget__slide.swiper-slide
+                    p.wiget__caption Набір драйверів для Телевізора Vinga L43FHD22B  (707 МБ) Читать INSTALL.txt в архиве.
+                    a.wiget__download(href='#' title='Скачати') Скачати
+                
+                .swiper-buttons
+                  button.swiper-button-prev
+                  button.swiper-button-next
+
+  // section products
+  .section.page-content__section
+    .section__header
+      h3.section__title Схожі моделі
+      .section__nav
+        .swiper-buttons.js-products-nav
+          button.swiper-button-prev
+          button.swiper-button-next
+
+    .section__content.section__content--products.swiper-container.js-products-slider
+      .grid.grid--flush.section__grid.swiper-wrapper
+
+        each product in db.products.related
+          .col.section__slide.swiper-slide
+            +product-card(product, 'section')
+
+      .swiper-pagination
+
+    
+block modals
+  include ../components/modal/review
+  include ../components/modal/reply
+  include ../components/modal/buy
+  

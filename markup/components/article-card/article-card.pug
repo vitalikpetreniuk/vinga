@@ -1,0 +1,22 @@
+mixin article-card(data, b)
+  .article-card(class=data.type ? 'article-card--' + data.type : '' class=b ? b + '__article-card' : '')
+    a.article-card__photo(href=data.url title='')
+      img.article-card__img(src=data.img + data.exp srcset=data.img + '@2x' + data.exp + ' 2x' alt='')
+    .article-card__body
+      if (data.type != 'inline')
+        .article-card__header
+          .article-card__meta
+            span.article-card__date= data.date        
+      h4.article-card__title
+        a.article-card__link(href=data.url title='')= data.title
+      if (data.caption)
+        p.article-card__caption= data.caption
+      .article-card__footer
+        .article-card__meta
+          span.article-card__category= data.category
+          .article-card__stats
+            if data.comments
+              span.article-card__comments= data.comments
+            
+            if data.views
+              span.article-card__views= data.views

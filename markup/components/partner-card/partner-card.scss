@@ -1,0 +1,48 @@
+.partner-card {
+    position: relative;
+    // padding-bottom: 100%;
+    min-height: 143px;
+    margin: -1px;
+    display: block;
+    background-color: $white;
+    border: 1px solid $border;
+
+    &:hover {
+        .partner-card__img {
+            transform: scale(1) rotate(2deg);
+        }
+    }
+
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__img {
+        transform: scale(0.75);
+        transition: transform 250ms ease-in-out;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: $gutter;
+        text-align: center;
+
+        display: none;
+    }
+
+    &__title {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+}

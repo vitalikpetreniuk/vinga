@@ -1,0 +1,21 @@
+.br-theme-css-stars .br-widget {
+    height: 20px;
+}
+
+.br-theme-css-stars .br-widget a {
+    margin-right: 3px;
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.br-theme-css-stars .br-widget a.br-selected:after,
+.br-theme-css-stars .br-widget a.br-active:after,
+.br-theme-css-stars .br-widget:not(.br-readonly) a:hover:after {
+    color: #FFA800;
+}
+
+.br-widget a:first-child {
+    display: none;
+}

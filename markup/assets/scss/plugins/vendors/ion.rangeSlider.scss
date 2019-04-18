@@ -1,0 +1,33 @@
+.irs--flat {
+  height: rem(20px);
+}
+
+.irs--flat .irs-line,
+.irs--flat .irs-bar {
+  top: rem(10px);
+  height: 1px;
+  background-color: #C4C4C4;
+  border-radius: 0;
+}
+
+.irs--flat .irs-bar {
+  background-color: $accent;
+}
+
+.irs--flat .irs-handle {
+  top: 0;
+  width: rem(20px);
+  height: rem(20px);
+  background-color: $accent;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 250ms;
+}
+
+.irs--flat .irs-handle:hover {
+  background-color: darken($accent, 5%);
+}
+
+.irs--flat .irs-handle i {
+  display: none !important;
+}

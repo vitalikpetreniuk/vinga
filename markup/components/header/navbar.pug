@@ -1,0 +1,137 @@
+// page-navbar
+.page__navbar.js-navbar
+
+  // page-header
+  .page-header.page__page-header
+    .container.page-header__container
+      a.logo.page-header__logo(href='homepage.html' title='')
+        img.logo__img(src='__static__img/minified-svg/logo.svg' alt='Vinga')
+
+      ul.primary-nav.page-header__primary-nav.js-primary-nav
+        each navItem in db.primaryNav
+          li.primary-nav__item
+            a.primary-nav__link(href=navItem.url title=navItem.title)= navItem.title
+      
+      form.search-site.page-header__search-site.js-search
+        //- input.input.search-site__input(type='text' name='search' placeholder='Пошук' js-search-input)
+        input.input.search-site__input(type='text' placeholder='Пошук' js-search-input)
+        .search-site__loader
+          .loader.--bubbles.page__loader
+            span.loader__item
+            span.loader__item
+            span.loader__item
+        .search-site__hint.search-site__hint--error
+          .search-site__wrapper
+            p По запиту “Пристрій” нічого не знайдено
+        button(type='submit').search-site__btn
+        .search-site__hint
+          .search-site__wrapper
+            .search-site__scroll
+              a.search-site__item(href="#") 
+                .search-site__image
+                  img(src="/assets/img/content/products/product-1.jpg" srcset="/assets/img/content/products/product-1@2x.jpg 2x" alt="")
+                p Пристрій безперебійного живлення Vinga LED 1200VA plastic case
+                span 
+                  strong 21 432 
+                  | грн.
+              a.search-site__item(href="#") 
+                .search-site__image
+                  img(src="/assets/img/content/products/product-2.jpg" srcset="/assets/img/content/products/product-2@2x.jpg 2x" alt="")
+                p  Пристрій безперебійного живлення Vinga LED 1200VA plastic case Пристрій безперебійного живлення Vinga LED 1200VA plastic case
+                span 
+                  strong 121 432 
+                  | грн.
+              a.search-site__item(href="#") 
+                .search-site__image
+                  img(src="/assets/img/content/products/product-3.jpg" srcset="/assets/img/content/products/product-3@2x.jpg 2x" alt="")
+                p Пристрій безперебійного живлення Vinga LED 1200VA plastic case
+                span 
+                  strong 2 121 432 
+                  | грн.
+              a.search-site__item(href="#") 
+                .search-site__image
+                  img(src="/assets/img/content/products/product-4.jpg" srcset="/assets/img/content/products/product-4@2x.jpg 2x" alt="")
+                p Пристрій безперебійного живлення Vinga LED 1200VA plastic case Пристрій безперебійного живлення Vinga LED 1200VA plastic case
+                span 
+                  strong 2 432 
+                  | грн.
+              a.search-site__item(href="#") 
+                .search-site__image
+                  img(src="/assets/img/content/products/product-5.jpg" srcset="/assets/img/content/products/product-5@2x.jpg 2x" alt="")
+                p Пристрій безперебійного живлення Vinga LED 1200VA plastic case
+                span 
+                  strong 432 
+                  | грн.
+              a.search-site__item(href="#") 
+                .search-site__image
+                  img(src="/assets/img/content/products/product-4.jpg" srcset="/assets/img/content/products/product-4@2x.jpg 2x" alt="")
+                p Пристрій безперебійного живлення Vinga LED 1200VA plastic case Пристрій безперебійного живлення Vinga LED 1200VA plastic case
+                span 
+                  strong 2 432 
+                  | грн.
+          a.search-site__link(href="#") Розширений пошук
+
+      
+      a.btn.btn-icon.btn-icon--compare.page-header__btn.js-compare-link(href='#' title='Порівняння')
+        span.btn__text Порівняння
+        span.btn__count 2
+      
+      .language.page-header__language.js-language
+        span.language__selected ua
+        ul.language__list
+          li.language__item
+            a.language__link(href='#' title='ru') ru
+          li.language__item
+            a.language__link(href='#' title='en') en
+
+      button.page-header__nav-toggle.js-nav-toggle
+        span.navicon.page-header__navicon
+          span.navicon__line
+          span.navicon__line
+          span.navicon__line
+
+
+  // page-nav
+  nav.page-nav.page-header__page-nav
+    .container.page-nav__container
+      ul.page-nav__list.js-page-nav
+
+        each navItem in db.pageNav
+          li.page-nav__item(class=navItem.type ? 'page-nav__item--' + navItem.type : '' class=(navItem.menu && navItem.type !== 'catalog') ? 'page-nav__item--dropdown' : '')
+            a.page-nav__link(href=navItem.url title='')
+              if (navItem.type === 'catalog')
+                span.navicon.page-nav__navicon
+                  span.navicon__line
+                  span.navicon__line
+                  span.navicon__line
+              | #{navItem.title}
+
+            if (navItem.menu)
+              ul.mega-menu.page-nav__mega-menu
+
+                each menuItem in navItem.menu
+                  li.mega-menu__item(class=menuItem.menu ? 'mega-menu__item--dropdown' : '')
+                    a.mega-menu__link(href=menuItem.url title='')= menuItem.title
+
+                    if (menuItem.menu)
+                      ul.mega-menu__list
+
+                        each submenuItem in menuItem.menu
+                          li.mega-menu__item(class=submenuItem.menu ? 'mega-menu__item--dropdown' : '')
+                            a.mega-menu__link(href=submenuItem.url title='')= submenuItem.title
+
+                            if (submenuItem.menu)
+                              ul.mega-menu__list
+
+                                each lastmenuItem in submenuItem.menu
+                                  li.mega-menu__item(class=lastmenuItem.menu ? 'mega-menu__item--dropdown' : '')
+                                    a.mega-menu__link(href=lastmenuItem.url title='')= lastmenuItem.title
+                    
+                    if (menuItem.img)
+                      a.mega-menu__promo(href=menuItem.url title='')
+                        img.mega-menu__img(src=menuItem.img + menuItem.exp srcset=menuItem.img + '@2x' + menuItem.exp + ' 2x' alt='')
+
+
+// page-menu
+.page-menu.page__page-menu.js-page-menu
+  .page-menu__container

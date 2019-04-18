@@ -1,0 +1,36 @@
+extends layout
+
+block settings
+  - aside = false;
+  - header = true;
+  - page = 'search';
+  - title = 'По запиту “Телевізор” знайдені наступні матеріали';
+  - breadcrumbs = ['Головна', 'Порівняння'];
+
+block content
+
+  // catalog
+  .grid.grid--flush.main-content__grid
+
+    each product in db.products.all
+      .col.main-content__col.col--search
+        +product-card(product, 'main-content')
+
+  a.search__link(href="#") Показати весь список
+
+block contentOutsideContainer
+  // section articles
+  div(style="background: white; padding: 40px 0 60px;")
+    .container
+      .section.section--news
+        .section__header
+          h3 Новини та огляди (#{db.articles.search.length})
+
+        .section__content.js-articles-slider-xl
+          .grid.section__grid
+
+            each article in db.articles.search
+              .col.section__column
+                +article-card(article, 'section')
+          
+          .swiper-pagination

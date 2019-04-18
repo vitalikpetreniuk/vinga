@@ -1,0 +1,14 @@
+mixin category-card(data, b)
+  .category-card(class=b ? b + '__category-card' : '')
+    a.category-card__link(href=data.url title=data.title)
+    img.category-card__img(src=data.img + data.exp srcset=data.img + '@2x' + data.exp + ' 2x' alt='')
+
+    .category-card__content
+      .category-card__title= data.title
+
+      if (data.list)
+        ul.list.category-card__list
+
+          each subcategory in data.list
+            li.list__item
+              a.list__link(href=subcategory.url title=subcategory.title)= subcategory.title

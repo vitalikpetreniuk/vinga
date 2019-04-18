@@ -1,0 +1,49 @@
+mixin product-card(data, b, type)
+  .product-card(class=type ? 'product-card--' + type : '' class=b ? b + '__product-card' : '')
+    .product-card__front(class=(type == 'compare') ? 'js-compare-header' : '')
+      .product-card__header(class=(type == 'compare') ? 'js-compare-fixed' : '')
+        if (type == 'compare')
+          a.product-card__remove(href='#' title='Удалить')
+        if (type == 'compare')
+          a.product-card__photo(href=data.url title='')
+            img.product-card__img(src=data.img + data.exp srcset=data.img + '@2x' + data.exp + ' 2x' alt='')
+        else
+          a.product-card__photo.swiper-container.js-product-photo-slider(href=data.url title='')
+            .product-card__wrapper.swiper-wrapper
+              each img in data.img
+                .product-card__slide.swiper-slide
+                  img.product-card__img(src=img.src + data.exp srcset=img.src + '@2x' + data.exp + ' 2x' alt='')
+            .swiper-button-prev
+            .swiper-button-next
+      .product-card__inner
+        .product-card__body
+          .product-card__about
+            if (data.category)
+              span.product-card__category= data.category
+            h3.product-card__title
+              a.product-card__link(href=data.url title='')= data.title
+            .product-card__info
+              .product-card__meta
+                +rating(data.rating, 'product-card')
+                a.product-card__comments(href=data.url title='')= data.comments
+          .product-card__footer
+            span.price.product-card__price= data.price
+              span.price__currency грн.
+            if (type != 'compare')
+              .product-card__actions
+                if (data.modal)
+                  a.btn.btn-primary.product-card__detail(href=data.url title=data.button data-remodal-target=data.modal)= data.button
+                else
+                  a.btn.btn-primary.product-card__detail(href=data.url title=data.button)= data.button
+                a.btn.btn-icon.btn-icon--compare.product-card__compare(href='#' title=data.compare)
+
+    if (type == 'compare')
+      ul.properties.product-card__properties.js-properties
+        each property in data.properties
+          li.properties__item
+            span.properties__label= property.label
+            span.properties__value= property.value
+
+    if (data.caption && !type)
+      .product-card__content
+        p.product-card__caption= data.caption

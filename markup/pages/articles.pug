@@ -1,0 +1,39 @@
+extends layout
+
+block settings
+  - aside = false;
+  - header = true;
+  - page = 'articles';
+  - title = 'Новини та огляди';
+  - breadcrumbs = ['Головна', 'Новини та огляди'];
+  //- - filterCategory = ['Всi', 'Огляди', 'Вiдео', 'Новинки', 'Блог', 'Ноутбуки'];
+
+block content
+  
+  // articles
+  .grid.main-content__grid
+
+    each article in db.articles.all
+      .col.main-content__col
+        +article-card(article, 'main-content')
+  
+  // pagination
+  ul.pagination.main-content__pagination.main-content__pagination--center
+    //- - for (var i = 1; i <= 5; i++) {
+      li.pagination__item
+        a.pagination__link(href='#' title=i class=(i === 1) ? 'is-active' : '')= i
+    //- - }
+    li.pagination__item
+      a.pagination__link(href='#') 1
+    li.pagination__item
+      a.pagination__link.prev(href='#') 
+    li.pagination__item
+      a.pagination__link(href='#') 4
+    li.pagination__item
+      a.pagination__link.is-active(href='#') 5
+    li.pagination__item
+      a.pagination__link(href='#') 6
+    li.pagination__item
+      a.pagination__link.next(href='#') 
+    li.pagination__item
+      a.pagination__link(href='#') 32

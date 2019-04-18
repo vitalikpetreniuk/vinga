@@ -1,0 +1,16 @@
+extends layout
+
+block settings
+  - aside = false;
+  - header = true;
+  - title = 'Наші партнери';
+  - breadcrumbs = ['Головна', 'Партнери'];
+
+block content
+  
+  // partners
+  .grid.grid--flush.main-content__grid.grid--partners
+
+    each partner in db.partners
+      .col.main-content__col
+        +partner-card(partner, 'main-content')

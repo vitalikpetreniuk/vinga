@@ -1,0 +1,20 @@
+mixin rating(data, b, select)
+  .rating(class=b ? b + '__rating' : '')
+    if select
+      select.js-rating
+        option(value='0') 0
+        - for (var i = 1; i <= 5; i++) {
+          if (i === data)
+            option(value=i selected)= i
+          else
+            option(value=i)= i
+        - }
+    else
+      select.js-rating(readonly)
+        option(value='0') 0
+        - for (var i = 1; i <= 5; i++) {
+          if (i === data)
+            option(value=i selected)= i
+          else
+            option(value=i)= i
+        - }

@@ -1,0 +1,31 @@
+// modal add review
+.remodal.modal(data-remodal-id='addReview')
+  button.remodal-close(data-remodal-action='close')
+  .modal__title Додати відгук
+  form.form.modal__form.js-form-add-review
+    .field.field--inline.form__field
+      +rating(0, 'field', true)
+      label.label.field__label Оцініть товар
+    
+    .field.form__field
+      label.label.field__label Переваги:
+      textarea.textarea.field__textarea(type='text' name='good')
+    
+    .field.form__field
+      label.label.field__label Недоліки:
+      textarea.textarea.field__textarea(type='text' name='bad')
+    
+    .field.form__field
+      label.label.field__label Коментар
+      textarea.textarea.field__textarea(type='text' name='text')
+    
+    .field.form__field
+      label.label.field__label Ім’я
+      input.input.field__input(type='text' name='name')
+    
+    .field.form__field
+      label.label.field__label Ел. пошта
+      input.input.field__input(type='email' name='email')
+      small.field__small адресу не буде видно іншим користувачам
+
+    button.btn.btn-md.btn-secondary.form__btn Відправити

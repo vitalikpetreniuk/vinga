@@ -1,0 +1,58 @@
+extends layout
+
+block settings
+  - aside = false;
+  - header = true;
+  - title = 'Порівняння 6 товарів';
+  - navSlider = true;
+  - breadcrumbs = ['Головна', 'Порівняння'];
+
+block content
+
+    .compare.main-content__compare
+        .compare__aside
+            .compare__top.js-compare-header
+                .compare__fixed
+                    .compare__filter
+                        .select.compare__select
+                            select.js-compare-select
+                                option(value='Телевізори') Телевізори
+                                option(value='Ноутбуки та ПК') Ноутбуки та ПК
+                                option(value='Клавіатури та мишки') Клавіатури та мишки
+                                option(value='Медіаплеери') Медіаплеери
+                        
+                        label.radio.compare__radio
+                            input.radio__input(type='radio' name='radio' checked)
+                            span.radio__toggle
+                            span.radio__label Всі параметри
+                        
+                        label.radio.compare__radio
+                            input.radio__input(type='radio' name='radio')
+                            span.radio__toggle
+                            span.radio__label Відмінності
+                    
+                    .compare__links
+                        a.compare__link.compare__link--add(href='#' title='Добавить другие товары') Добавить другие товары
+                        a.compare__link.compare__link--clear(href='#' title='Очистить спсиок') Очистить спсиок
+
+            .compare__labels
+                h4.compare__title Характеристики
+                ul.properties.compare__properties.js-properties
+                    each property in db.products.all[0].properties
+                        li.properties__item
+                            span.properties__label= property.label
+
+        .compare__content
+            .compare__slider.swiper-container.js-compare-slider
+                .compare__nav
+                    .compare__prev
+                        button.swiper-button-prev
+                    .compare__pagination
+                        .swiper-pagination
+                    .compare__next
+                        button.swiper-button-next
+                .compare__wrapper.grid.grid--flush.swiper-wrapper
+
+                    each product in db.products.compare
+                        .compare__slide.col.swiper-slide
+                            +product-card(product, 'compare', 'compare')

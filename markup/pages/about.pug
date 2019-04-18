@@ -1,0 +1,35 @@
+extends layout
+
+block settings
+  - aside = false;
+  - header = true;
+  - page = 'about';
+  - title = 'Vinga. Покликана часом!';
+  - breadcrumbs = ['Головна', 'Vinga. Покликана часом!'];
+
+block content
+  
+  // article
+  article.article.main-content__article
+    .article__body
+      .content.article__content
+        p Це новітні технології відібрані згідно потреб ринку, сучасний дизайн, ціна, що не містить в собі зайвих витрат. Це влучне поєднання!
+        .article__about-grid
+          .article__about-item
+            p.number 1 млн. +
+            p проданих товарів
+          .article__about-item
+            p.number > 340
+            p категорій товару
+          .article__about-item
+            p.number більше 24
+            p партнерів по всій країні
+        p 20 років компанія BRAIN працює на IT-ринку України. Ми раніше за всіх реагуємо на його потреби. Наші знання та досвід допомагають визначити та запропонувати споживачеві найбільш актуальні рішення. І ми поєднали свої знання і потреби ринку в бренді VINGA.
+        p
+          span Прогресивні рішення створюють одиниці, щоб мільйони могли цим скористатися.
+        p Та це не означає, що кожна прогресивна знахідка буде популярною … більшість так і залишається не прийнятими та знехтуваними.
+    .article__sidebar
+      .article__sidebar-item
+        span.icon
+        p Логотип та правила його використання
+        a.download(href="#") Скачати

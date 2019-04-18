@@ -1,0 +1,6 @@
+mixin partner-card(data, b)
+    a.partner-card(href=data.url title=data.title class=b ? b + '__partner-card' : '')
+        .partner-card__inner
+            img.partner-card__img(src=data.img alt='')
+            .partner-card__info
+                span.partner-card__title= data.title

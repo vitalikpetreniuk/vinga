@@ -1,0 +1,70 @@
+extends layout
+
+block settings
+  - aside = false;
+  - header = true;
+  - page = 'about';
+  - title = 'Cервіс та гарантія';
+  - breadcrumbs = ['Головна', 'Cервіс та гарантія!'];
+
+block content
+  
+  // article
+  article.article.main-content__article
+    .article__body.article__body--service
+      .content.article__content
+        p Сервісне та гарантійне обслуговування продукції VINGA здійснюється через точки продажу а також на базі сервісних центрів BRAIN по всій теріторії України. Для звернення по гарантії важливо з собою мати:
+        .article__about-grid.article__about-grid--service
+          .article__about-item.article__about-item--service
+            .article__about-image
+              img(src="assets/img/content/service/service-1.svg", alt="")
+            p Упаковка для транспортування
+          .article__about-item.article__about-item--service
+            .article__about-image
+              img(src="assets/img/content/service/service-2.svg", alt="")
+            p Повна комплектація
+          .article__about-item.article__about-item--service
+            .article__about-image
+              img(src="assets/img/content/service/service-3.svg", alt="")
+            p Гарантійний талон
+        p
+          strong У разі відсутності наших представництв у вашому місті
+        .article__row
+          p Київ, відділення Нової Пошти № 222 (менше 5-ти кг.)
+          p Київ, відділення Нової Пошти № 148 без обмежень ваги і габаритів
+        p ТОВ “КОМЕЛ” ЕГРПОУ 24083083 
+          br
+          | "представник компанії КОМЕЛ" контактний номер 0800-215-500. Номер ТТН відправити на пошту 
+          a(href="mailto:service@brain.com.ua") service@brain.com.ua
+        .article__image
+          img(src="assets/img/content/service/novposh.svg", width="214" alt="")
+    .article__sidebar
+      .article__sidebar-item
+        span.icon.phone
+        a.phone(href="#") 0 800 215-500
+        p.desc Пн-Пт 9-19. Безкоштовно по Україні
+
+  // article
+  article.article.main-content__article.article--map
+    .article__map-container
+      .article__map-title Адреси cервiс-центрiв BRAIN
+      .article__map
+        iframe.shops__iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2252974.572336173!2d30.305529888999455!3d49.02582578802739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d1d9c154700e8f%3A0x1068488f64010!2z0KPQutGA0LDQuNC90LA!5e0!3m2!1sru!2sru!4v1551053476820' width='100%' height='100%' frameborder='0' style='border:0' allowfullscreen)
+      
+    .article__sidebar
+      .article__sidebar-item
+        .select
+          select
+            option(value="#") Одеса
+            option(value="#") Київ
+            option(value="#") Харків
+            
+        p вул. Дмитрівська, 
+          br
+          | 56 (044) 353-76-68 
+          a.sidebar-link(href="#") service@brain.com.ua
+        p Графік роботи: 
+          br
+          | будні з 9 до 19 
+          br
+          | субота з 10 до 15
