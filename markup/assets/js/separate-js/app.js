@@ -31,6 +31,12 @@ $(document).ready(function(){
           theme: "css-stars",
           readonly: $rating.attr("readonly") ? true : false
       });
+
+      $(this).siblings('.br-widget').find('a:nth-child(2)').on('dblclick', function (e) {
+          console.log('test');
+          e.preventDefault();
+        $(this).prev().trigger('click');
+      });
   });
 
   $('.js-input-price').each(function() {
@@ -977,4 +983,8 @@ $(document).ready(function(){
   }
 
   _window.on("load resize", resizeHeaderCompare);
+
+    _window.on('load', function () {
+        $('.rating, .select').css('opacity', 1);
+    });
 })

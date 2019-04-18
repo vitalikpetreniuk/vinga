@@ -106,6 +106,9 @@ body
   min-width: 320px
   overflow-x: hidden
 
+.hidden-mob
+  display: none
+
 .page
   display: flex
   flex-direction: column
@@ -677,7 +680,7 @@ body
   &__input
     padding-right: rem(59px)
     padding-left: 20px
-    line-height: 1
+    line-height: normal
     &:focus
       & ~ .search-site__btn
         background-color: $primary
@@ -691,6 +694,7 @@ body
     right: 0
     padding-left: 0
     padding-right: 0
+    padding-top: 1px
     width: rem(44px)
     height: 100%
     line-height: 1
@@ -1257,6 +1261,9 @@ body
   &__properties
     .properties__label
       display: none
+  &__caption
+    max-height: 344px
+    overflow: hidden
 
 .sharer
   background-color: transparent
@@ -1351,7 +1358,7 @@ body
     top: 0
     right: 0
     &::before
-      +bg-svg($scales)
+      +bg-svg($compare-new)
       opacity: 0.6
     &::after
       display: none
@@ -1539,6 +1546,15 @@ body
     height: 100%
     &[data-remodal-target]
       cursor: pointer
+    &-video
+      height: 0
+      padding-bottom: 56.24%
+      iframe
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
   &__img
     width: 100%
   &__more
@@ -1751,6 +1767,14 @@ body
     z-index: 2
     background-color: $white
     vertical-align: middle
+
+.comments
+  padding-top: 60px
+  .review-card__info
+    padding-top: 30px
+  +max($xl)
+    .review-card__info
+      padding-top: 0
 
 .reviews
   &__header
@@ -3217,6 +3241,7 @@ body
     +max($sm)
       margin-bottom: rem(-40px)
   &__grid
+    background: #fff
     +max($md)
       margin-left: -$gutter
       margin-right: -$gutter
@@ -3350,7 +3375,7 @@ body
     height: rem(40px)
     border: 0
     &::before
-      +bg-svg($scales)
+      +bg-svg($compare-new-active)
       opacity: 1
     +min($md)
       &:hover::before
@@ -3598,6 +3623,10 @@ body
     align-items: flex-start
     +max($md)
       flex-direction: column
+      .hidden-mob
+        display: block
+        order: 2
+        margin-top: 23px
   &__start
     margin-right: rem(30px)
     +max($md)
@@ -3608,6 +3637,9 @@ body
     margin-bottom: rem(15px)
     +max($md)
       margin-bottom: rem(7px)
+
+      &+.page-footer__copyright
+        display: none
   &__copyright
     margin-bottom: rem(20px)
   &__studio-link
@@ -3695,3 +3727,131 @@ body
   will-change: transform
   backface-visibility: hidden
   transform-style: preserve-3d
+
+.rating, .select
+  opacity: 0
+
+.product-preview__panel
+  display: flex
+  align-items: center
+  +max($xl)
+    display: block
+  +max($lg)
+    display: flex
+  +max($md)
+    margin-top: 30px
+  +max($sm)
+    display: block
+  .product-preview__btn
+    margin: 0 !important
+
+.share
+  &-wrap
+    margin-left: 30px
+    display: flex
+    align-items: center
+    +max($xl)
+      margin: 30px 0 0
+    +max($lg)
+      margin: 0 0 0 30px
+    +max($sm)
+      margin: 15px 0 0
+  &-title
+    color: #AFB3B4
+    margin-right: 14px
+  &-list
+    display: flex
+    align-items: center
+    a
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      position: relative
+      text-indent: -99999999px
+      overflow: hidden
+      &:before
+        content: ''
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%)
+      &.facebook
+        background-color: #3A589B
+        &:before
+          +bg-svg($facebook)
+      &.telegram
+        background-color: #0087CB
+        &:before
+          +bg-svg($telegram-white)
+      &.messenger
+        background-color: #1EAFE5
+        &:before
+          +bg-svg($messenger-white)
+      &:not(:last-child)
+        margin-right: 15px
+      &:hover
+        opacity: .6
+
+.download
+  &-item
+    display: flex
+    +max($sm)
+      flex-wrap: wrap
+    &:not(:last-child)
+      padding-bottom: 29px
+      border-bottom: 1px solid #F2F2F2
+      margin-bottom: 30px
+    &-icon
+      a
+        display: block
+        width: 40px
+        height: 40px
+        border: 1px solid #C4C4C4
+        position: relative
+        overflow: hidden
+        text-indent: -9999999px
+        &:before
+          content: ''
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%,-50%)
+          +bg-svg($download)
+    &-info
+      width: calc(100% - 178px)
+      padding: 0 20px
+      +max($sm)
+        width: calc(100% - 40px)
+        padding-right: 0
+      &-more
+        font-size: 14px
+        line-height: 1
+        padding-top: 1px
+        width: 178px
+        +max($md)
+          width: 130px
+        +max($sm)
+          width: 100%
+          padding: 10px 0 0 60px
+      a
+        display: block
+        color: #25ABF1
+        position: relative
+        top: -4px
+        &:hover
+          text-decoration: underline
+    &-file
+      display: flex
+      align-items: center
+      font-size: 14px
+      line-height: 1
+    &-format
+      color: rgba(0, 0, 0, 0.85)
+      font-weight: 700
+      margin-right: 10px
+    &-weight
+      color: #999
+    &-version
+      margin-bottom: 10px
+    &-date
+      color: #999

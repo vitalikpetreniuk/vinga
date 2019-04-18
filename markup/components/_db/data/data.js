@@ -1632,7 +1632,7 @@ var data = {db: {
             url: 'product.html',
             category: 'Відео і Аудіо',
             title: 'Телевізор Vinga S55UHD20G',
-            rating: 3,
+            rating: 0,
             comments: 26,
             price: '12 678',
             button: 'Придбати',

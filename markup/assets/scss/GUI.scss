@@ -99,25 +99,48 @@ input[type=submit] {
         &::before, &::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
             margin: auto;
             display: inline-block;
             vertical-align: middle;
-            transition: opacity 250ms ease-in-out;
+            transition: background-image 250ms ease-in-out;
         }
 
         &--compare {
             &::before {
-                @include bg-svg($scales);
-                opacity: 0.55;
+                @include bg-svg($compare-new);
+                opacity: 1;
+                left: 0;
+                bottom: 0;
+                top: 0;
+                right: 0;
             }
 
             &:hover:not(.page-header__btn) {
                 &::before {
-                    opacity: 1;
+                    @include bg-svg($compare-new-active);
+                }
+                &:after{
+                    border-radius: 50%;
+                    @include bg-svg($checked);
+                    background-color: #FF8C00;
+                    width: 18px;
+                    height: 18px;
+                    right: 6px;
+                    top: 6px;
+                }
+            }
+            &.active{
+                &:before{
+                    @include bg-svg($compare-new-active);
+                }
+                &:after{
+                    border-radius: 50%;
+                    @include bg-svg($checked);
+                    background-color: #FF8C00;
+                    width: 18px;
+                    height: 18px;
+                    right: 6px;
+                    top: 6px;
                 }
             }
         }
@@ -170,7 +193,7 @@ input[type=submit] {
     box-shadow: none;
     border-radius: 0;
 
-    &::-webkit-input-placeholder {color: $placeholderColor;}
+    &::-webkit-input-placeholder {color: $placeholderColor; padding-top: 2px;}
     &::-moz-placeholder          {color: $placeholderColor;}
     &:-moz-placeholder           {color: $placeholderColor;}
     &:-ms-input-placeholder      {color: $placeholderColor;}
