@@ -112,6 +112,7 @@ block content
             span.tabs__count 1
           li.tabs__btn.js-tabs-btn Вiдгуки
             span.tabs__count 0
+          li.tabs__btn.js-tabs-btn Завантаження
         
         .tabs__body
 
@@ -305,6 +306,9 @@ block content
 
           // tabs item
           .tabs__item.js-tab
+            button.tabs__btn Вiдгуки
+              span.tabs__count 0
+
             .tabs__inner
               .reviews.tabs__reviews
                 .reviews__header
@@ -336,7 +340,58 @@ block content
                     input.input.field__input(type='email' name='email')
                     small.field__small адресу не буде видно іншим користувачам
 
-                  button.btn.btn-md.btn-secondary.form__btn Додати відгук
+                  button.btn.btn-md.btn-secondary.form__btn Додати відгук// tabs item
+
+          // tabs item
+          .tabs__item.js-tab
+            button.tabs__btn Завантаження
+            .tabs__inner
+              .downloads
+                .download-item
+                  .download-item-icon
+                    a(href="#") Завантажити
+                  .download-item-info
+                    a(href="#") Набір драйверів для Windows 10 x64 (438 МБ) Читать README.txt в архіві
+                    .download-item-file
+                      .download-item-format .zip
+                      .download-item-weight 2,1 MB
+                  .download-item-info-more
+                    .download-item-date 20.01.2018
+
+                .download-item
+                  .download-item-icon
+                    a(href="#") Завантажити
+                  .download-item-info
+                    a(href="#") Оновлення BIOS для можливості блокування TouchPad (7 МБ)
+                    .download-item-file
+                      .download-item-format .zip
+                      .download-item-weight 2,1 MB
+                  .download-item-info-more
+                    .download-item-version Версія 1.11.111
+                    .download-item-date 20.01.2018
+
+                .download-item
+                  .download-item-icon
+                    a(href="#") Завантажити
+                  .download-item-info
+                    a(href="#") Набір драйверів для Windows 10 x64 (438 МБ) Читать README.txt в архіві
+                    .download-item-file
+                      .download-item-format .zip
+                      .download-item-weight 2,1 MB
+                  .download-item-info-more
+                    .download-item-date 20.01.2018
+
+                .download-item
+                  .download-item-icon
+                    a(href="#") Завантажити
+                  .download-item-info
+                    a(href="#") Оновлення BIOS для можливості блокування TouchPad (7 МБ)
+                    .download-item-file
+                      .download-item-format .zip
+                      .download-item-weight 2,1 MB
+                  .download-item-info-more
+                    .download-item-version Версія 1.11.111
+                    .download-item-date 20.01.2018
 
     .product-detail__aside
 
