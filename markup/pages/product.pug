@@ -22,7 +22,11 @@ block content
         .media__slider.swiper-container.js-media-thumbs
           .media__wrapper.swiper-wrapper
 
-            - for (var i = 0; i < 9; i++) {
+            .media__slide.swiper-slide
+              .media__item
+                .media__inner
+                  img.media__img(src='__static__img/content/product/video-screen.png' alt='')
+            - for (var i = 0; i < 8; i++) {
               .media__slide.swiper-slide
                 .media__item
                   .media__inner
@@ -34,8 +38,12 @@ block content
       .media__large
         .media__slider.swiper-container.js-media-large
           .media__wrapper.swiper-wrapper
-            
-            - for (var i = 0; i < 9; i++) {
+
+            .media__slide.swiper-slide
+              .media__item
+                .media__inner.media__inner-video(data-remodal-target='modal-media')
+                  iframe(src='https://www.youtube.com/embed/tfu0_GV6t9o' frameborder='0' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+            - for (var i = 0; i < 8; i++) {
               .media__slide.swiper-slide
                 .media__item
                   .media__inner(data-remodal-target='modal-media')
@@ -56,7 +64,11 @@ block content
 
             .media__wrapper.swiper-wrapper
 
-              - for (var i = 0; i < 9; i++) {
+              .media__slide.swiper-slide
+                .media__item
+                  .media__inner
+                    img.media__img(src='__static__img/content/product/video-screen.png' alt='')
+              - for (var i = 0; i < 8; i++) {
                 .media__slide.swiper-slide
                   .media__item
                     .media__inner
@@ -65,8 +77,12 @@ block content
         .media__large
           .media__slider.swiper-container.js-media-large-modal
             .media__wrapper.swiper-wrapper
-              
-              - for (var i = 0; i < 9; i++) {
+
+              .media__slide.swiper-slide
+                .media__item
+                  .media__inner.media__inner-video(data-remodal-target='modal-media')
+                    iframe(src='https://www.youtube.com/embed/tfu0_GV6t9o' frameborder='0' allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+              - for (var i = 0; i < 8; i++) {
                 .media__slide.swiper-slide
                   .media__item
                     .media__inner
@@ -340,7 +356,7 @@ block content
                     input.input.field__input(type='email' name='email')
                     small.field__small адресу не буде видно іншим користувачам
 
-                  button.btn.btn-md.btn-secondary.form__btn Додати відгук// tabs item
+                  button.btn.btn-md.btn-secondary.form__btn Додати відгук
 
           // tabs item
           .tabs__item.js-tab
