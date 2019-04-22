@@ -80,6 +80,30 @@ $(document).ready(function(){
     }
   });
 
+  $('.js-form-add-review-modal').validate({
+    rules: {
+        good: 'required',
+        bad: 'required',
+        text: 'required',
+        name: 'required',
+        email: {
+            required: true,
+            email: true
+        }
+    },
+
+    messages: {
+        good: 'Це поле є обов\'язковим',
+        bad: 'Це поле є обов\'язковим',
+        text: 'Це поле є обов\'язковим',
+        name: 'Це поле є обов\'язковим',
+        email: {
+            required: 'Це поле є обов\'язковим',
+            email: 'Будь ласка, введіть дійсну адресу електронної пошти'
+        }
+    }
+  });
+
   $('.js-form-reply-review').validate({
     rules: {
         text: 'required',
