@@ -98,7 +98,85 @@ block content
         .article__share
           a.fb(href="#")
           a.tg(href="#") 
-          a.mess(href="#") 
+          a.mess(href="#")
+
+      .reviews.comments
+        .reviews__header
+          h3.reviews__heading Коментарі
+
+        .reviews__content
+
+          // review-card
+          .review-card.reviews__review-card
+            .review-card__header
+              .review-card__info
+                p.review-card__name Света Василенко
+              span.review-card__date 20.01.2018
+
+            .review-card__body
+              .review-card__first
+                ul.review-card__list
+                  li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует. <br>Пульт стоит отдельно отметить, очень удобный, отличная сенсорика
+                .review-card__footer
+                  .vote.review-card__vote
+                    a.vote__btn.vote__btn--like(href='#' title='') 05
+                    a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                  button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+
+          // review-card
+          .review-card.reviews__review-card
+            .review-card__header
+              .review-card__info
+                p.review-card__name Петр
+              span.review-card__date 20.01.2018
+
+            .review-card__body
+              .review-card__first
+                ul.review-card__list
+                  li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует. <br>Пульт стоит отдельно отметить, очень удобный, отличная сенсорика
+                .review-card__footer
+                  .vote.review-card__vote
+                    a.vote__btn.vote__btn--like(href='#' title='') 05
+                    a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                  button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+
+              .review-card__answer
+                .review-card__meta
+                  p.review-card__author Иван Петров
+                  span.review-card__date 06 лютого 2019
+                ul.review-card__list
+                  li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует.
+                .review-card__footer
+                  .vote.review-card__vote
+                    a.vote__btn.vote__btn--like(href='#' title='') 05
+                    a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                  button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+
+          // review-card
+          .review-card.reviews__review-card
+            .review-card__header
+              .review-card__info
+                p.review-card__name Света Василенко
+              span.review-card__date 20.01.2018
+
+            .review-card__body
+              .review-card__first
+                ul.review-card__list
+                  li.review-card__item.review-card__item--comment Телевизор очень понравился, хорошая картинка, отличный звук. От вайфая работает очень шустро, даже mkv формат показывает без задержек что однозначно радует. <br>Пульт стоит отдельно отметить, очень удобный, отличная сенсорика
+                .review-card__footer
+                  .vote.review-card__vote
+                    a.vote__btn.vote__btn--like(href='#' title='') 05
+                    a.vote__btn.vote__btn--dislike(href='#' title='') 01
+                  button.btn.btn-link.review-card__btn(data-remodal-target='replyReview') Відповісти
+
+        .reviews__footer
+          button.btn.btn-md.btn-secondary.reviews__btn(data-remodal-target='addComment') Додати коментар
+          ul.pagination.reviews__pagination
+            - for (var i = 1; i <= 3; i++) {
+              li.pagination__item
+                a.pagination__link(href='#' title=i class=(i === 2) ? 'is-active' : '')= i
+            - }
+
     .article__sidebar
       .article__sidebar-item
         p.article__sidebar-title Цікаве на тему
@@ -114,3 +192,6 @@ block content
         a(href="#") Vinga Iron S140 - бюджетний ноутбук з недешевими можливостями
         a(href="#") Огляд і тестування телевізора Vinga E55UHD20B: основа мультимедійних розваг
         a(href="#") Огляд і тестування корпуса Vinga Chaos: у дусі сучасності
+
+block modals
+  include ../components/modal/comment
