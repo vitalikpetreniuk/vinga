@@ -81,12 +81,6 @@ block content
     .product-preview__content
       .product-preview__inner
         a.btn.btn-icon.btn-icon--compare.product-preview__compare(href='#' title='Добавить к сравнению')
-        .shares.product-preview__shares
-          button.btn.btn-icon.btn-icon--socials.shares__btn.js-srahes-toggle
-          .shares__dropdown
-            button.sharer.sharer--facebook.shares__item(data-sharer='facebook' data-url='https://google.com')
-            button.sharer.sharer--telegram.shares__item(data-sharer='telegram' data-url='https://google.com')
-            button.sharer.sharer--messenger.shares__item(data-sharer='viber' data-url='https://google.com')
         p.product-preview__articul Артикул: L43FHD22B
         h1.product-preview__heading Пристрій безперебійного живлення Vinga LED 1200VA plastic case (VPE-1200P)
         p.product-preview__caption Лінійно-інтерактивні джерело безперебійного живлення Vinga призначені для захисту персональних комп'ютерів, робочих станцій, а також серверів, оснащених імпульсними блоками живлення.
@@ -95,7 +89,15 @@ block content
           a.product-card__comments(href='#' title='') 26
         span.price.product-preview__price 27 332
           span.price__currency грн.
-        a.btn.btn-primary.product-preview__btn(href='#' title='Де придбати' data-remodal-target='buyProduct') Де придбати
+        .product-preview__panel
+          a.btn.btn-primary.product-preview__btn(href='#' title='Де придбати' data-remodal-target='buyProduct') Де придбати
+          .share-wrap
+            .share-title Поділитися:
+            .share-list
+              a.facebook(href='#') Поділитися
+              a.telegram(href='#') Поділитися
+              a.messenger(href='#') Поділитися
+
 
 
   // product detail
