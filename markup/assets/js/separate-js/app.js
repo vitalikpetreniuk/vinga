@@ -1013,7 +1013,9 @@ $(document).ready(function(){
     });
 
     _window.on('resize', function () {
-        $("select").select2('close');
+        if($('.select2-container--open').length){
+            $("select").select2('close');
+        }
     });
 
 });
