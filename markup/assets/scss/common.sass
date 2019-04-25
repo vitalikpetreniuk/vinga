@@ -1368,7 +1368,7 @@ body
 
 .product-detail
   display: flex
-  +max($lg)
+  +max($xl)
     flex-direction: column
 
   &__content
@@ -3832,4 +3832,15 @@ body
         top: 50px
       &__select
         margin-right: 0
+
+@media only screen and (min-width: 1261px) and (max-width: 1440px)
+  .tabs__btn
+    padding: 10px 25px
+    font-size: 15px
+
+@media only screen and (min-width: 768px) and (max-width: 992px)
+  .tabs__btn
+    padding: 10px 15px
+    font-size: 14px
+
 
