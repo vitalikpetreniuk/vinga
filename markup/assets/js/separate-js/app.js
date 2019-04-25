@@ -1013,11 +1013,7 @@ $(document).ready(function(){
     });
 
     _window.on('resize', function () {
-        $('.select2-container--open').each(function () {
-           if(!$(this).parent().hasClass('select')){
-               $(this).remove();
-           }
-        });
+        $("select").select2('close');
     });
 
 });
