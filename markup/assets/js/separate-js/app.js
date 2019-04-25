@@ -157,7 +157,7 @@ $(document).ready(function(){
   }
   excreptContent();
 
-  _window.on('resize', debounce(excreptContent, 50));
+  // _window.on('resize', debounce(excreptContent, 50));
 
   _document.on('click', '.excrept__more', function() {
     var $link = $(this),
