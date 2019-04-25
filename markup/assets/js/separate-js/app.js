@@ -1011,4 +1011,13 @@ $(document).ready(function(){
     _window.on('load', function () {
         $('.rating, .select').css('opacity', 1);
     });
-})
+
+    _window.on('resize', function () {
+        $('.select2-container--open').each(function () {
+           if(!$(this).parent().hasClass('select')){
+               $(this).remove();
+           }
+        });
+    });
+
+});
