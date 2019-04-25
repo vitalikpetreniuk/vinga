@@ -279,7 +279,7 @@ $(document).ready(function(){
   });
 
   $(document).mousemove(function(event) {
-      if (window.innerWidth > 767) {
+      if (window.innerWidth > 574) {
           if ($(event.target).closest(".page-nav__item").length || $('.search-site__hint.is-active').length || $('body.page--menu').length) {
               _overlay.addClass("is-visible");
           } else {
@@ -289,7 +289,7 @@ $(document).ready(function(){
   });
 
   _window.on('resize', debounce(function(){
-    if (window.innerWidth <= 767) {
+    if (window.innerWidth <= 574) {
       _overlay.removeClass("is-visible");
     }
   }, 100))
