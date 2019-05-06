@@ -290,7 +290,7 @@ $(document).ready(function(){
 
   _window.on('resize', debounce(function(){
     if (window.innerWidth <= 574) {
-      _overlay.removeClass("is-visible");
+      // _overlay.removeClass("is-visible");
     }
   }, 100))
 
@@ -1021,5 +1021,15 @@ $(document).ready(function(){
             $("select").select2('close');
         }
     });
+
+    _window.on('load resize', function () {
+        if (window.matchMedia('(min-width: 1261px)').matches) {
+            if(_body.hasClass('page--menu')){
+                $('.js-nav-toggle').trigger('click');
+            }
+        }
+    });
+
+
 
 });
