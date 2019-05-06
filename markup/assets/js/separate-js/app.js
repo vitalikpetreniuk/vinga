@@ -345,13 +345,13 @@ $(document).ready(function(){
       filter.close();
   });
 
-  new Swiper('.js-product-photo-slider', {
+  var productSlider = new Swiper('.js-product-photo-slider', {
     loop: true,
     navigation: {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next"
-    },
-  })
+    }
+  });
 
   new Swiper(".js-promo-slider", {
       loop: true,
@@ -378,6 +378,10 @@ $(document).ready(function(){
         nextEl: ".js-products-related-nav .swiper-button-next"
       },
       breakpoints: {
+          1260: {
+            slidesPerView: 3,
+            direction: 'horizontal'
+          },
           1023: {
             slidesPerView: 2,
             direction: 'horizontal'
