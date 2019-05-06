@@ -75,3 +75,83 @@ h1, h2, h3, h4, h5, h6{
   color: $black;
   line-height: 1.4285;
 }
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: -8px;
+
+  tbody{
+
+    @include max($sm){
+      display: block;
+    }
+  }
+
+  th{
+    color: $black;
+    text-align: left;
+  }
+
+  tr{
+
+    &:nth-child(odd){
+      background: $border;
+    }
+
+    th, td{
+      padding: 10px;
+      border: none;
+      width: 50%;
+      border-bottom: 1px solid #DBE5E9;
+      vertical-align: top;
+
+      @include max($sm){
+        padding: 0;
+        display: block;
+        width: 100%;
+        border-bottom: 0;
+      }
+    }
+
+    tr{
+      background: none !important;
+
+      &:not(:last-child){
+        border-bottom: 1px solid $border;
+      }
+
+      @include max($sm){
+        margin-bottom: rem(10px);
+        display: block;
+      }
+    }
+  }
+
+  @include max($sm){
+    display: block;
+
+    th{
+      padding-bottom: 5px;
+    }
+
+    td{
+      padding-top: 5px;
+    }
+
+    tr{
+
+      table td td{
+
+        width: 50%;
+        display: table-cell;
+
+
+        &:nth-child(1){
+          min-width: 130px
+        }
+      }
+    }
+  }
+}
