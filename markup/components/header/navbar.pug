@@ -75,7 +75,9 @@
       a.btn.btn-icon.btn-icon--compare.page-header__btn.js-compare-link(href='#' title='Порівняння')
         span.btn__text Порівняння
         span.btn__count 2
-      
+
+      .compare-empty Немає товарів у порівнянні
+
       .language.page-header__language.js-language
         span.language__selected ua
         ul.language__list
@@ -117,6 +119,12 @@
                       ul.mega-menu__list
 
                         each submenuItem in menuItem.menu
+                          li.mega-menu__item
+                            a.mega-menu__link test
+                          li.mega-menu__item
+                            a.mega-menu__link test
+                          li.mega-menu__item
+                            a.mega-menu__link test
                           li.mega-menu__item(class=submenuItem.menu ? 'mega-menu__item--dropdown' : '')
                             a.mega-menu__link(href=submenuItem.url title='')= submenuItem.title
 
@@ -124,6 +132,16 @@
                               ul.mega-menu__list
 
                                 each lastmenuItem in submenuItem.menu
+                                  li.mega-menu__item
+                                    a.mega-menu__link test
+                                  li.mega-menu__item
+                                    a.mega-menu__link test
+                                  li.mega-menu__item
+                                    a.mega-menu__link test
+                                  li.mega-menu__item
+                                    a.mega-menu__link test
+                                  li.mega-menu__item
+                                    a.mega-menu__link test
                                   li.mega-menu__item(class=lastmenuItem.menu ? 'mega-menu__item--dropdown' : '')
                                     a.mega-menu__link(href=lastmenuItem.url title='')= lastmenuItem.title
                     
