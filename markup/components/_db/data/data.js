@@ -109,6 +109,39 @@ var data = {db: {
             }, {
                 url: 'catalog.html',
                 title: 'Блоки живлення',
+            }, {
+                url: 'catalog.html',
+                title: 'Bluetooth-адаптер',
+            }, {
+                url: 'catalog.html',
+                title: 'Дата кабель',
+            }, {
+                url: 'catalog.html',
+                title: 'Зарядний пристрій',
+            }, {
+                url: 'catalog.html',
+                title: 'Зчитувач флеш-карт',
+            }, {
+                url: 'catalog.html',
+                title: 'Кабель для передачі даних',
+            }, {
+                url: 'catalog.html',
+                title: 'Кабель для принтера',
+            }, {
+                url: 'catalog.html',
+                title: 'Кабель живлення',
+            }, {
+                url: 'catalog.html',
+                title: 'Кабель мультимедійний',
+            }, {
+                url: 'catalog.html',
+                title: 'Рюкзак для ноутбука',
+            }, {
+                url: 'catalog.html',
+                title: 'Сумка для ноутбука',
+            }, {
+                url: 'catalog.html',
+                title: 'Скло захисне',
             }]
         }, {
             url: 'catalog.html',

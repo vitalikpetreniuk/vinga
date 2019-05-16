@@ -2501,7 +2501,8 @@ body
     margin-right: 15px
   &__vote
     font-size: 14px
-    color: #999
+    color: #999 !important
+    text-decoration: none !important
     white-space: nowrap
     &::before
       content: ''
@@ -2512,6 +2513,8 @@ body
       vertical-align: middle
       opacity: 0.35
       transition: opacity 250ms ease-in-out
+    &:hover::before
+      opacity: 1
     &:not(:last-child)
       margin-right: 15px
     &--like
@@ -2523,6 +2526,7 @@ body
   &__comments
     font-size: 14px
     white-space: nowrap
+    cursor: pointer
     color: #999
     &::before
       content: ''
@@ -2658,7 +2662,7 @@ body
 .navicon
   position: relative
   display: inline-block
-  width: rem(20px)
+  width: 21px
   height: rem(12px)
   vertical-align: middle
   &__line
@@ -3436,7 +3440,7 @@ body
               &:nth-child(2)
                 opacity: 0
               &:nth-child(3)
-                transform: translateY(1.5px) rotate(-45deg)
+                transform: translateY(1.5px) rotate(-44deg)
 
       .page-nav
         &__link

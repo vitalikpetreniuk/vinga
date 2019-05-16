@@ -119,12 +119,6 @@
                       ul.mega-menu__list
 
                         each submenuItem in menuItem.menu
-                          li.mega-menu__item
-                            a.mega-menu__link test
-                          li.mega-menu__item
-                            a.mega-menu__link test
-                          li.mega-menu__item
-                            a.mega-menu__link test
                           li.mega-menu__item(class=submenuItem.menu ? 'mega-menu__item--dropdown' : '')
                             a.mega-menu__link(href=submenuItem.url title='')= submenuItem.title
 
@@ -132,16 +126,6 @@
                               ul.mega-menu__list
 
                                 each lastmenuItem in submenuItem.menu
-                                  li.mega-menu__item
-                                    a.mega-menu__link test
-                                  li.mega-menu__item
-                                    a.mega-menu__link test
-                                  li.mega-menu__item
-                                    a.mega-menu__link test
-                                  li.mega-menu__item
-                                    a.mega-menu__link test
-                                  li.mega-menu__item
-                                    a.mega-menu__link test
                                   li.mega-menu__item(class=lastmenuItem.menu ? 'mega-menu__item--dropdown' : '')
                                     a.mega-menu__link(href=lastmenuItem.url title='')= lastmenuItem.title
                     

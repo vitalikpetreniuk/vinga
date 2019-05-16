@@ -1040,5 +1040,9 @@ $(document).ready(function () {
         }
     });
 
+    $('.article__comments').on('click', function () {
+        $('html,body').animate({scrollTop: $('.comments').offset().top},'slow');
+    });
+
 
 });
