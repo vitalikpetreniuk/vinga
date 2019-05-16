@@ -1583,6 +1583,7 @@ var data = {db: {
         }]
     }, {
         title: 'Підтримка Smart TV',
+        opened: true,
         values: [{
             title: 'Немае',
             count: 9
@@ -1592,6 +1593,7 @@ var data = {db: {
         }]
     }, {
         title: 'Роздільна здатність',
+        opened: true,
         values: [{
             title: 'Full HD',
             count: 9
@@ -1605,6 +1607,7 @@ var data = {db: {
     }, {
         title: 'В.2 ха-ки',
         inline: true,
+        opened: true,
         values: [{
             title: '21.5" - 29"',
             count: 215,
@@ -1624,6 +1627,7 @@ var data = {db: {
         }]
     }, {
         title: 'Ціна',
+        opened: true,
         type: 'price'
     }],
 
@@ -1645,6 +1649,7 @@ var data = {db: {
         }]
     }, {
         title: 'Новини та огляди',
+        opened: true,
         values: [{
             title: 'Відео',
             count: 9
