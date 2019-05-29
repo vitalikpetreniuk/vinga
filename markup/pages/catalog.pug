@@ -10,6 +10,7 @@ block aside
 
   form.product-filter.main-aside__product-filter.js-filter(action='/' method='post')
     .product-filter__inner
+      .product-filter__empty Відсутні фільтри для сортування
       each property in db.catalogFilter
         .product-filter__group
           .product-filter__title(class=property.opened ? 'is-opened' : '')= property.title
@@ -31,9 +32,9 @@ block aside
                         input.checkbox__input(type='checkbox')
                         span.checkbox__toggle
                         span.checkbox__label= value.title
-                          if value.count 
+                          if value.count
                             span.checkbox__count (#{value.count})
-            
+
             if (property.type === 'price')
               .product-filter__price
                 .product-filter__values
