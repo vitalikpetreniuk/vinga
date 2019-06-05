@@ -744,14 +744,6 @@ $(document).ready(function () {
             .toggleClass("is-opened");
     });
 
-    try {
-        $.browserSelector();
-        if ($("html").hasClass("chrome")) {
-            $.smoothScroll();
-        }
-    } catch (err) {
-    }
-
     function Sticky(el, offsetOption) {
         var _this = this;
         _this.offsetTop = 0
