@@ -3,14 +3,6 @@
     flex-direction: column;
     height: 100%;
 
-    &:hover {
-        .article-card {
-            &__img {
-                transform: scale(1.05);
-            }
-        }
-    }
-
     &--inline {
         @include min($md) {
             flex-direction: row;
