@@ -27,7 +27,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-consolidate": "^0.2.0",
     "lodash": "^4.17.11",
     "require-yaml": "0.0.1",
